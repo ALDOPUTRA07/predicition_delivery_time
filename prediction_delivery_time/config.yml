@@ -1,0 +1,86 @@
+# Package Overview
+package_name: prediction_delivery_time_model
+
+# Data Files
+data: deliverytime.csv
+
+# Model
+pipeline_name: prediction_delivery_time_model
+pipeline_save_file: prediction_delivery_time_model_output
+
+# Parameter
+# set train/test split
+test_size: 0.1
+
+# to set the random seed
+random_state: 42
+
+# parameter model
+xgboost_parameter:
+  n_estimators: 140
+  max_depth: 3
+  reg_alpha: 100
+  min_child_weight: 1
+  gamma: 0.4
+  colsample_bytree: 0.8
+  subsample: 0.6
+  nthread: 4
+  scale_pos_weight: 1
+  seed: 42
+
+# rename fearures
+variables_to_rename:
+  Time_taken(min): Time_taken
+
+# Variables
+target: Time_taken
+
+# list features
+features:
+  - ID
+  - Delivery_person_ID
+  - Delivery_person_Age
+  - Delivery_person_Ratings
+  - Restaurant_latitude
+  - Restaurant_longitude
+  - Delivery_location_latitude
+  - Delivery_location_longitude
+  - Type_of_order
+  - Type_of_vehicle
+  - Time_taken
+
+# Feature Engineering
+# drop variables
+drop_vars:
+  - ID
+  - Delivery_person_ID
+  - Delivery_person_Age
+  - Delivery_person_Ratings
+
+trim_whitespace_vars:
+  - Type_of_order
+  - Type_of_vehicle
+
+distance_column:
+  - Restaurant_latitude
+  - Restaurant_longitude
+  - Delivery_location_latitude
+  - Delivery_location_longitude
+
+type_vehicle_vars: 
+  - Type_of_vehicle
+
+type_order_vars: 
+  - Type_of_order
+
+# variable mappings
+map_type_vehicle:
+  motorcycle: 0
+  scooter: 1
+  electric_scooter: 2
+  
+map_type_order:
+  Snack: 0
+  Drinks: 1
+  Buffet: 2
+  Meal: 3

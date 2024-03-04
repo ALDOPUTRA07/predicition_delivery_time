@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+
+  fastapi_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: prediction_delivery_time:latest
+    container_name: prediction_delivery_time
+    restart: always
+    volumes:
+      - ./:/home/fastapi
+    ports:
+      - 5000:5000
+    networks:
+      - monitoring
+
+  monitoring-db:
+    image: postgres:16.2
+    environment:
+      POSTGRES_USER: "mpsxwbpk"
+      POSTGRES_PASSWORD: "Xs9g67JIW5yZLgZHcjBuLInFMIpH_hCk@satao"
+      POSTGRES_DB: "mpsxwbpk"
+      PGDATA: "/var/lib/postgresql/data/pgdata"
+    container_name: monitoring-db-postgres
+    ports:
+    - 5432:5432
+    networks:
+      - monitoring
+    volumes:
+      - monitoring_db_data:/var/lib/postgresql/data
+
+
+volumes:
+    monitoring_db_data: {}
+
+
+networks:
+  monitoring:
+    name: monitoring
