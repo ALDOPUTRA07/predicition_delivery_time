@@ -50,6 +50,19 @@
 
 This project predicts food delivery time. The project uses XGboost regression as a basic model to predict delivery time. This project also includes monitoring machine learning models using evidentlyAI.
 
+### Getting prediction
+
+
+https://github.com/ALDOPUTRA07/predicition_delivery_time/assets/123882693/d6315e28-3c64-4cdc-b194-319bd05ab545
+
+
+
+### Monitoring the model
+
+
+https://github.com/ALDOPUTRA07/predicition_delivery_time/assets/123882693/33448ad9-c3db-42f4-bf60-fc48ba271ccc
+
+
 
 ### Built With
 
