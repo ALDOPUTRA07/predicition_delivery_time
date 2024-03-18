@@ -48,7 +48,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project predicts food delivery time. The project uses XGboost regression as a basic model to predict delivery time. This project also includes monitoring machine learning models using evidentlyAI.
+In the food delivery industry, where prompt and accurate delivery is crucial. Delivery time directly affects customer satisfaction and their overall experience. This project can overcome the case. This project predicts food delivery time. The project uses XGboost regression as a model to predict delivery time. This project also includes monitoring machine learning models using evidentlyAI.
 
 ### Getting prediction
 
@@ -74,7 +74,7 @@ These are list any major frameworks/libraries used to make the project.
 
 ## Background
 
-In the food delivery industry, where prompt and accurate delivery is crucial, the food delivery time prediction model plays a vital role. Delivery time directly affects customer satisfaction and their overall experience. The model helps optimize operations, streamline logistics, and meet customer expectations by providing reliable estimates of when the food will be delivered.
+In the food delivery industry, where prompt and accurate delivery is crucial, the food delivery time prediction model plays a vital role. Delivery time directly affects customer satisfaction and their overall experience.
 
 ## Business Values
 The project helps optimize operations, streamline logistics, and meet customer expectations by providing reliable estimates of when the food will be delivered.
@@ -83,7 +83,7 @@ The project helps optimize operations, streamline logistics, and meet customer e
 This project is an API to get predictions. We can deploy it on the server and send data according to the format to the API, and the API will return the prediction results to the client.
 
 ## Next Step 
-By monitoring the machine learning model, we can retrain it if the model starts to deteriorate.
+Based on monitoring the machine learning model, we can retrain it if the model starts to deteriorate.
 
 ## MLOPS Concepts
 <p align="center">
